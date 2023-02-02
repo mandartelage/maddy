@@ -18,25 +18,15 @@ public void launchBrowser() throws IOException
 	System.setProperty("webdriver.chrome.driver", "E:\\chromedriver.exe");
 	
 	
-	 driver =new ChromeDriver();
-	 
+	 driver =new ChromeDriver(); 
 	 
 	driver.manage().window().maximize();
 	
-	
 	driver.get(UtlityClass.ReadDataFromPropertyFile("url"));
-	
 	
 	UtlityClass.implicitWait(1000, driver);
 	
-	
 	Reporter.log("launching browser",  true);
-	
-	
-	//comment 1
-	
-	
-	//comment 2
 	
 	
 	
