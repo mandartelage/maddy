@@ -1,5 +1,29 @@
 package neoStoxPomClasses;
 
-public class branch3 {
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
 
-}
+public class branch3 {
+	
+
+		
+		@FindBy(xpath = "(//a[text()='Sign In'])[1]")   private WebElement signinbutton ;
+		
+		public branch3 (WebDriver driver) 
+		{
+			
+		PageFactory.initElements(driver,this );	
+		}
+		
+		//3 Utilize within a method with access level public
+		
+		public void clicksigninbutton() {
+			
+			signinbutton.click();
+			Reporter.log("clicking on signin button", true);
+		}
+	}	
+
